@@ -17,24 +17,45 @@ constexpr uint64 QRWA_QMINE_HOLDER_PERCENT = 900; // 90.0%
 constexpr uint64 QRWA_QRWA_HOLDER_PERCENT = 100;  // 10.0%
 constexpr uint64 QRWA_PERCENT_DENOMINATOR = 1000; // 100.0%
 
-// QMINE Asset Constant
-// Issuer: QMINEQQXYBEGBHNSUPOUYDIQKZPCBPQIIHUUZMCPLBPCCAIARVZBTYKGFCWM
-// Name: 297666170193 ("QMINE")
+//// QMINE Asset Constant
+//// Issuer: QMINEQQXYBEGBHNSUPOUYDIQKZPCBPQIIHUUZMCPLBPCCAIARVZBTYKGFCWM
+//// Name: 297666170193 ("QMINE")
+//static const Asset QRWA_QMINE_ASSET_INIT =
+//{
+//    ID(_Q,_M,_I,_N,_E,_Q,_Q,_X,_Y,_B,_E,_G,_B,_H,_N,_S,
+//       _U,_P,_O,_U,_Y,_D,_I,_Q,_K,_Z,_P,_C,_B,_P,_Q,_I,
+//       _I,_H,_U,_U,_Z,_M,_C,_P,_L,_B,_P,_C,_C,_A,_I,_A,
+//       _R,_V,_Z,_B,_T,_Y,_K,_G),
+//    297666170193ULL
+//};
+//
+//// QMINE DEV's Address for receiving rewards from moved QMINE tokens
+//// ZOXXIDCZIMGCECCFAXDDCMBBXCDAQJIHGOOATAFPSBFIOFOYECFKUFPBEMWC
+//static const id QRWA_QMINE_DEV_ADDRESS_DEFAULT = ID(_Z, _O, _X, _X, _I, _D, _C, _Z, _I, _M, _G, _C, _E, _C, _C, _F,
+//    _A, _X, _D, _D, _C, _M, _B, _B, _X, _C, _D, _A, _Q, _J, _I, _H,
+//    _G, _O, _O, _A, _T, _A, _F, _P, _S, _B, _F, _I, _O, _F, _O, _Y,
+//    _E, _C, _F, _K, _U, _F, _P, _B);
+
+// qRWA testnet version
+
+// QMINE issuer (testnet)
+// Identity: OSDNETVSEYMCFFWDAYRMSKCDXHSAWVUKGYEKBCWPEEHDWFLPDRIJVFRD
 static const Asset QRWA_QMINE_ASSET_INIT =
 {
-    ID(_Q,_M,_I,_N,_E,_Q,_Q,_X,_Y,_B,_E,_G,_B,_H,_N,_S,
-       _U,_P,_O,_U,_Y,_D,_I,_Q,_K,_Z,_P,_C,_B,_P,_Q,_I,
-       _I,_H,_U,_U,_Z,_M,_C,_P,_L,_B,_P,_C,_C,_A,_I,_A,
-       _R,_V,_Z,_B,_T,_Y,_K,_G),
-    297666170193ULL
+    ID(_O,_S,_D,_N,_E,_T,_V,_S,_E,_Y,_M,_C,_F,_F,_W,_D,
+       _A,_Y,_R,_M,_S,_K,_C,_D,_X,_H,_S,_A,_W,_V,_U,_K,
+       _G,_Y,_E,_K,_B,_C,_W,_P,_E,_E,_H,_D,_W,_F,_L,_P,
+       _D,_R,_I,_J,_V,_F,_R,_D),
+    297666170193ULL               // QMINE
 };
 
-// QMINE DEV's Address for receiving rewards from moved QMINE tokens
-// ZOXXIDCZIMGCECCFAXDDCMBBXCDAQJIHGOOATAFPSBFIOFOYECFKUFPBEMWC
-static const id QRWA_QMINE_DEV_ADDRESS_DEFAULT = ID(_Z, _O, _X, _X, _I, _D, _C, _Z, _I, _M, _G, _C, _E, _C, _C, _F,
-    _A, _X, _D, _D, _C, _M, _B, _B, _X, _C, _D, _A, _Q, _J, _I, _H,
-    _G, _O, _O, _A, _T, _A, _F, _P, _S, _B, _F, _I, _O, _F, _O, _Y,
-    _E, _C, _F, _K, _U, _F, _P, _B);
+// QMINE dev address (receives reward for moved QMINE tokens)
+// Identity: XOMJVZHAMHFGJBLZALHNMSZZMXLAWFPHTZFVUMBJGHXOJPPOZWQVGURB
+static const id QRWA_QMINE_DEV_ADDRESS_DEFAULT =
+ID(_X, _O, _M, _J, _V, _Z, _H, _A, _M, _H, _F, _G, _J, _B, _L, _Z,
+    _A, _L, _H, _N, _M, _S, _Z, _Z, _M, _X, _L, _A, _W, _F, _P, _H,
+    _T, _Z, _F, _V, _U, _M, _B, _J, _G, _H, _X, _O, _J, _P, _P, _O,
+    _Z, _W, _Q, _V, _G, _U, _R, _B);
 
 // Payout Timing Constants
 constexpr uint64 QRWA_PAYOUT_DAY = FRIDAY; // Friday
