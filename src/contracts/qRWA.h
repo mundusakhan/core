@@ -1271,17 +1271,48 @@ public:
 
     INITIALIZE()
     {
-        state.mQmineAsset = QRWA_QMINE_ASSET_INIT; // Set the QMINE asset
+        state.mQmineAsset.assetName = 297666170193ULL;
+        state.mQmineAsset.issuer = ID(
+            _O, _S, _D, _N, _E, _T, _V, _S, _E, _Y, _M, _C, _F, _F, _W, _D,
+            _A, _Y, _R, _M, _S, _K, _C, _D, _X, _H, _S, _A, _W, _V, _U, _K,
+            _G, _Y, _E, _K, _B, _C, _W, _P, _E, _E, _H, _D, _W, _F, _L, _P,
+            _D, _R, _I, _J, _V, _F, _R, _D
+        );
         state.mTreasuryBalance = 0;
         state.mCurrentAssetProposalId = 0;
         setMemory(state.mLastPayoutTime, 0);
 
         // Initialize default governance parameters
-        state.mCurrentGovParams.mAdminAddress = QRWA_QMINE_ASSET_INIT.issuer; // Admin set by default, subject to change via Gov Voting
-        state.mCurrentGovParams.electricityAddress = QRWA_QMINE_ASSET_INIT.issuer; // Electricity address set by default, subject to change via Gov Voting
-        state.mCurrentGovParams.maintenanceAddress = QRWA_QMINE_ASSET_INIT.issuer; // Maintenance address set by default, subject to change via Gov Voting
-        state.mCurrentGovParams.reinvestmentAddress = QRWA_QMINE_ASSET_INIT.issuer; // Reinvestment address set by default, subject to change via Gov Voting
-        state.mCurrentGovParams.qmineDevAddress = QRWA_QMINE_DEV_ADDRESS_DEFAULT; // Default QMINE_DEV address
+        state.mCurrentGovParams.mAdminAddress = ID(
+            _O, _S, _D, _N, _E, _T, _V, _S, _E, _Y, _M, _C, _F, _F, _W, _D,
+            _A, _Y, _R, _M, _S, _K, _C, _D, _X, _H, _S, _A, _W, _V, _U, _K,
+            _G, _Y, _E, _K, _B, _C, _W, _P, _E, _E, _H, _D, _W, _F, _L, _P,
+            _D, _R, _I, _J, _V, _F, _R, _D
+        ); // Admin set by default, subject to change via Gov Voting
+        state.mCurrentGovParams.electricityAddress = ID(
+            _O, _S, _D, _N, _E, _T, _V, _S, _E, _Y, _M, _C, _F, _F, _W, _D,
+            _A, _Y, _R, _M, _S, _K, _C, _D, _X, _H, _S, _A, _W, _V, _U, _K,
+            _G, _Y, _E, _K, _B, _C, _W, _P, _E, _E, _H, _D, _W, _F, _L, _P,
+            _D, _R, _I, _J, _V, _F, _R, _D
+        ); // Electricity address set by default, subject to change via Gov Voting
+        state.mCurrentGovParams.maintenanceAddress = ID(
+            _O, _S, _D, _N, _E, _T, _V, _S, _E, _Y, _M, _C, _F, _F, _W, _D,
+            _A, _Y, _R, _M, _S, _K, _C, _D, _X, _H, _S, _A, _W, _V, _U, _K,
+            _G, _Y, _E, _K, _B, _C, _W, _P, _E, _E, _H, _D, _W, _F, _L, _P,
+            _D, _R, _I, _J, _V, _F, _R, _D
+        ); // Maintenance address set by default, subject to change via Gov Voting
+        state.mCurrentGovParams.reinvestmentAddress = ID(
+            _O, _S, _D, _N, _E, _T, _V, _S, _E, _Y, _M, _C, _F, _F, _W, _D,
+            _A, _Y, _R, _M, _S, _K, _C, _D, _X, _H, _S, _A, _W, _V, _U, _K,
+            _G, _Y, _E, _K, _B, _C, _W, _P, _E, _E, _H, _D, _W, _F, _L, _P,
+            _D, _R, _I, _J, _V, _F, _R, _D
+        ); // Reinvestment address set by default, subject to change via Gov Voting
+        state.mCurrentGovParams.qmineDevAddress = ID(
+            _X, _O, _M, _J, _V, _Z, _H, _A, _M, _H, _F, _G, _J, _B, _L, _Z,
+            _A, _L, _H, _N, _M, _S, _Z, _Z, _M, _X, _L, _A, _W, _F, _P, _H,
+            _T, _Z, _F, _V, _U, _M, _B, _J, _G, _H, _X, _O, _J, _P, _P, _O,
+            _Z, _W, _Q, _V, _G, _U, _R, _B
+        );
         state.mCurrentGovParams.electricityPercent = 350;
         state.mCurrentGovParams.maintenancePercent = 50;
         state.mCurrentGovParams.reinvestmentPercent = 100;
