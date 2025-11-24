@@ -101,7 +101,7 @@ static constexpr unsigned int SOLUTION_THRESHOLD_DEFAULT = NUMBER_OF_OUTPUT_NEUR
 // include commonly needed definitions
 #include "network_messages/common_def.h"
 
-#define TESTNET_EPOCH_DURATION 3000
+#define TESTNET_EPOCH_DURATION 300
 
 #define MAX_NUMBER_OF_TICKS_PER_EPOCH (TESTNET_EPOCH_DURATION + 5)
 #define FIRST_TICK_TRANSACTION_OFFSET sizeof(unsigned long long)
