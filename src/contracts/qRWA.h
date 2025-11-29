@@ -1166,10 +1166,10 @@ inline static sint64 GetQmineBalanceOf(const QPI::QpiContextFunctionCall& qpi, c
         // Name: 297666170193 ("QMINE")
         state.mQmineAsset.assetName = 297666170193ULL;
         state.mQmineAsset.issuer = ID(
-            _Q, _M, _I, _N, _E, _Q, _Q, _X, _Y, _B, _E, _G, _B, _H, _N, _S,
-            _U, _P, _O, _U, _Y, _D, _I, _Q, _K, _Z, _P, _C, _B, _P, _Q, _I,
-            _I, _H, _U, _U, _Z, _M, _C, _P, _L, _B, _P, _C, _C, _A, _I, _A,
-            _R, _V, _Z, _B, _T, _Y, _K, _G
+            _O, _S, _D, _N, _E, _T, _V, _S, _E, _Y, _M, _C, _F, _F, _W, _D,
+            _A, _Y, _R, _M, _S, _K, _C, _D, _X, _H, _S, _A, _W, _V, _U, _K,
+            _G, _Y, _E, _K, _B, _C, _W, _P, _E, _E, _H, _D, _W, _F, _L, _P,
+            _D, _R, _I, _J, _V, _F, _R, _D
         );
         state.mTreasuryBalance = 0;
         state.mCurrentAssetProposalId = 0;
@@ -1177,37 +1177,37 @@ inline static sint64 GetQmineBalanceOf(const QPI::QpiContextFunctionCall& qpi, c
 
         // Initialize default governance parameters
         state.mCurrentGovParams.mAdminAddress = ID(
-            _Q, _M, _I, _N, _E, _Q, _Q, _X, _Y, _B, _E, _G, _B, _H, _N, _S,
-            _U, _P, _O, _U, _Y, _D, _I, _Q, _K, _Z, _P, _C, _B, _P, _Q, _I,
-            _I, _H, _U, _U, _Z, _M, _C, _P, _L, _B, _P, _C, _C, _A, _I, _A,
-            _R, _V, _Z, _B, _T, _Y, _K, _G
+            _O, _S, _D, _N, _E, _T, _V, _S, _E, _Y, _M, _C, _F, _F, _W, _D,
+            _A, _Y, _R, _M, _S, _K, _C, _D, _X, _H, _S, _A, _W, _V, _U, _K,
+            _G, _Y, _E, _K, _B, _C, _W, _P, _E, _E, _H, _D, _W, _F, _L, _P,
+            _D, _R, _I, _J, _V, _F, _R, _D
         ); // Admin set to QMINE Issuer by default, subject to change via Gov Voting
         state.mCurrentGovParams.electricityAddress = ID(
-            _Q, _M, _I, _N, _E, _Q, _Q, _X, _Y, _B, _E, _G, _B, _H, _N, _S,
-            _U, _P, _O, _U, _Y, _D, _I, _Q, _K, _Z, _P, _C, _B, _P, _Q, _I,
-            _I, _H, _U, _U, _Z, _M, _C, _P, _L, _B, _P, _C, _C, _A, _I, _A,
-            _R, _V, _Z, _B, _T, _Y, _K, _G
+            _O, _S, _D, _N, _E, _T, _V, _S, _E, _Y, _M, _C, _F, _F, _W, _D,
+            _A, _Y, _R, _M, _S, _K, _C, _D, _X, _H, _S, _A, _W, _V, _U, _K,
+            _G, _Y, _E, _K, _B, _C, _W, _P, _E, _E, _H, _D, _W, _F, _L, _P,
+            _D, _R, _I, _J, _V, _F, _R, _D
         ); // Electricity address set to QMINE Issuer by default, subject to change via Gov Voting
         state.mCurrentGovParams.maintenanceAddress = ID(
-            _Q, _M, _I, _N, _E, _Q, _Q, _X, _Y, _B, _E, _G, _B, _H, _N, _S,
-            _U, _P, _O, _U, _Y, _D, _I, _Q, _K, _Z, _P, _C, _B, _P, _Q, _I,
-            _I, _H, _U, _U, _Z, _M, _C, _P, _L, _B, _P, _C, _C, _A, _I, _A,
-            _R, _V, _Z, _B, _T, _Y, _K, _G
+            _O, _S, _D, _N, _E, _T, _V, _S, _E, _Y, _M, _C, _F, _F, _W, _D,
+            _A, _Y, _R, _M, _S, _K, _C, _D, _X, _H, _S, _A, _W, _V, _U, _K,
+            _G, _Y, _E, _K, _B, _C, _W, _P, _E, _E, _H, _D, _W, _F, _L, _P,
+            _D, _R, _I, _J, _V, _F, _R, _D
         ); // Maintenance address set to QMINE Issuer by default, subject to change via Gov Voting
         state.mCurrentGovParams.reinvestmentAddress = ID(
-            _Q, _M, _I, _N, _E, _Q, _Q, _X, _Y, _B, _E, _G, _B, _H, _N, _S,
-            _U, _P, _O, _U, _Y, _D, _I, _Q, _K, _Z, _P, _C, _B, _P, _Q, _I,
-            _I, _H, _U, _U, _Z, _M, _C, _P, _L, _B, _P, _C, _C, _A, _I, _A,
-            _R, _V, _Z, _B, _T, _Y, _K, _G
+            _O, _S, _D, _N, _E, _T, _V, _S, _E, _Y, _M, _C, _F, _F, _W, _D,
+            _A, _Y, _R, _M, _S, _K, _C, _D, _X, _H, _S, _A, _W, _V, _U, _K,
+            _G, _Y, _E, _K, _B, _C, _W, _P, _E, _E, _H, _D, _W, _F, _L, _P,
+            _D, _R, _I, _J, _V, _F, _R, _D
         ); // Reinvestment address set to QMINE Issuer by default, subject to change via Gov Voting
 
         // QMINE DEV's Address for receiving rewards from moved QMINE tokens
         // ZOXXIDCZIMGCECCFAXDDCMBBXCDAQJIHGOOATAFPSBFIOFOYECFKUFPBEMWC
         state.mCurrentGovParams.qmineDevAddress = ID(
-            _Z, _O, _X, _X, _I, _D, _C, _Z, _I, _M, _G, _C, _E, _C, _C, _F,
-            _A, _X, _D, _D, _C, _M, _B, _B, _X, _C, _D, _A, _Q, _J, _I, _H,
-            _G, _O, _O, _A, _T, _A, _F, _P, _S, _B, _F, _I, _O, _F, _O, _Y,
-            _E, _C, _F, _K, _U, _F, _P, _B
+            _X, _O, _M, _J, _V, _Z, _H, _A, _M, _H, _F, _G, _J, _B, _L, _Z,
+            _A, _L, _H, _N, _M, _S, _Z, _Z, _M, _X, _L, _A, _W, _F, _P, _H,
+            _T, _Z, _F, _V, _U, _M, _B, _J, _G, _H, _X, _O, _J, _P, _P, _O,
+            _Z, _W, _Q, _V, _G, _U, _R, _B
         ); // Default QMINE_DEV address
         state.mCurrentGovParams.electricityPercent = 350;
         state.mCurrentGovParams.maintenancePercent = 50;
