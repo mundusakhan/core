@@ -16,7 +16,7 @@
 
 ////////////////// USER CONFIGURABLE OPTIONS (default is for mainnet with swap feature) \\\\\\\\\\\\\\\\
 
-// #define TESTNET // COMMENT this line if you want to compile for mainnet
+#define TESTNET // COMMENT this line if you want to compile for mainnet
 
 // this option enables using disk as RAM to reduce hardware requirement for qubic core node
 // it is highly recommended to enable this option if you want to run a full mainnet node on SSD
@@ -3613,7 +3613,18 @@ static void beginEpoch()
         broadcastedComputors.computors.publicKeys[i].setRandomValue();
     }
 #endif
-    setMem(&broadcastedComputors.computors.signature, sizeof(broadcastedComputors.computors.signature), 0);
+    // setMem(&broadcastedComputors.computors.signature, sizeof(broadcastedComputors.computors.signature), 0);
+    unsigned char myArbitratorSeed[] = "wgfqazfmgucrluchpuivdkguaijrowcnuclfsjrthfezqapnjelkgll";
+
+    m256i arbSubseed, arbPrivateKey, arbPublicKey;
+    getSubseed(myArbitratorSeed, arbSubseed.m256i_u8);
+    getPrivateKey(arbSubseed.m256i_u8, arbPrivateKey.m256i_u8);
+    getPublicKey(arbPrivateKey.m256i_u8, arbPublicKey.m256i_u8);
+
+    unsigned char digest[32];
+    KangarooTwelve(&broadcastedComputors, sizeof(BroadcastComputors) - SIGNATURE_SIZE, digest, sizeof(digest));
+
+    sign(arbSubseed.m256i_u8, arbPublicKey.m256i_u8, digest, broadcastedComputors.computors.signature);
 
 #ifndef NDEBUG
     ts.checkStateConsistencyWithAssert();
